@@ -127,7 +127,9 @@ A&B | A&!B
 
 ## About
 
-Made by **Turjo** — CSE student, Digital Logic Design course project.
+Digital Logic Simulator - An OOP lab project developed in Level 1, Semester 2 at KUET CSE, featuring simulation of fundamental digital logic gates and circuits through an interactive and user-friendly interface.
+
+~ Turjo
 
 GitHub: [turjo-deb](https://github.com/turjo-deb)
 
