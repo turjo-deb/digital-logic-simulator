@@ -71,11 +71,9 @@ Variables can be any uppercase letter: `A`, `B`, `C`, `D`.
 
 ## Build & Run
 
-**Requirements**
-- g++ with C++17 support
-- SFML 2.6 dev libraries
+### Linux (Ubuntu/Kubuntu)
 
-**Install SFML (Ubuntu/Kubuntu)**
+**Install SFML**
 ```bash
 sudo apt install libsfml-dev
 ```
@@ -92,7 +90,50 @@ $(pkg-config --cflags --libs sfml-graphics sfml-window sfml-system) \
 ./logic_sim
 ```
 
-Make sure the `assets/fonts/` folder is in the same directory as the binary.
+---
+
+### Windows
+
+**Install SFML**
+- Download SFML 2.6 from [sfml-dev.org](https://www.sfml-dev.org/download.php) — pick the version matching your compiler (MinGW recommended)
+- Extract it somewhere like `C:\SFML`
+
+**Compile with MinGW**
+```bash
+g++ -std=c++17 main.cpp GUI.cpp Parser.cpp Tokenizer.cpp TruthTable.cpp CircuitDrawer.cpp KMapDrawer.cpp \
+-I"C:\SFML\include" -L"C:\SFML\lib" \
+-lsfml-graphics -lsfml-window -lsfml-system \
+-o logic_sim.exe
+```
+
+**Run**
+- Copy the `.dll` files from `C:\SFML\bin` into the same folder as `logic_sim.exe`
+- Then run `logic_sim.exe`
+
+---
+
+### macOS
+
+**Install SFML via Homebrew**
+```bash
+brew install sfml
+```
+
+**Compile**
+```bash
+g++ -std=c++17 main.cpp GUI.cpp Parser.cpp Tokenizer.cpp TruthTable.cpp CircuitDrawer.cpp KMapDrawer.cpp \
+-lsfml-graphics -lsfml-window -lsfml-system \
+-o logic_sim
+```
+
+**Run**
+```bash
+./logic_sim
+```
+
+---
+
+> Make sure the `assets/fonts/` folder is in the same directory as the binary on all platforms.
 
 ---
 
