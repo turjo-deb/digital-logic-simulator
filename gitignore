@@ -1,0 +1,24 @@
+# compiled binary
+logic_sim
+*.o
+*.out
+
+# build folders
+build/
+cmake-build-*/
+
+# IDE files
+.vscode/
+.idea/
+*.user
+
+# Vivado/FPGA stuff (if any)
+*.jou
+*.log
+*.str
+vivado_*.backup*
+
+# OS junk
+.DS_Store
+Thumbs.db
+*~
